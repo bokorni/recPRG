@@ -6,10 +6,13 @@
     */
 
     //ENTRADA
-
-
-    //PROCESSAMENTO
-
+    const mercado1 = Number(prompt(`Informe o preço da carne no mercado 1.`).trim());
+    const mercado2 = Number(prompt(`Informe o preço da carne no mercado 2.`).trim());
+    const mercado3 = Number(prompt(`Informe o preço da carne no mercado 3.`).trim());
+    let media = (mercado1 + mercado2 + mercado3)
+    let valorfinal = media / 3
+    //PROCESSAMENTO 
+    alert(`O Preço médio da carne é R$${valorfinal.toFixed(2).replace(",",".")}`);
 
     //SAÍDA
 

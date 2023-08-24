@@ -5,15 +5,31 @@
     Peça para o vendedor informar o valor do computador que está vendendo e também informar a forma de pagamento que o Cliente procederá para a compra do equipamento.
     Se for via (B)Boleto, o cliente terá 3% (3/100) de desconto.
     Se for via (D)Dinheiro, o cliente terá 5% (5/100) de desconto.
-    Se for via (P)PIX, o cliente terá 10% (10/100) de descconto.
+    Se for via (P)PIX, o cliente terá 10% (10/100) de desconto.
     Calcule e apresente o preço final do computador de acordo com a Forma de Pagamento.
     */
 
     //ENTRADA
-
-
+    const precocomp = Number(prompt(`Insira o valor do computador`).trim().replace(",", "."));
+    const formapag = prompt(`Informe a forma de pagamento que o cliente procederá para a compra, "B" para boleto, "D" para dinheiro e "P" para pix.`.trim().toUpperCase());
+    let desconto = 0
     //PROCESSAMENTO
-
+    if (formapag == "B") {
+        let desconto = (precocomp * 0.03)
+        let valorfinal = precocomp - desconto
+        alert(`O preço do computador com esta forma de pagamento será de R$${valorfinal.toFixed(2).replace(",", ".")}.`);
+    }
+    else if (formapag == "D") {
+        let desconto = (precocomp * 0.05)
+        let valorfinal = precocomp - desconto
+        alert(`O preço do computador com esta forma de pagamento será de R$${valorfinal.toFixed(2).replace(",", ".")}.`);
+    }
+    else if (formapag == "P") {
+        let desconto = (precocomp * 0.1)
+        let valorfinal = precocomp - desconto
+        alert(`O preço do computador com esta forma de pagamento será de R$${valorfinal.toFixed(2).replace(",", ".")}.`);
+    }
+    else alert(`Informação inválida.`);
 
     //SAÍDA
 

@@ -10,14 +10,23 @@
     */
 
     //ENTRADA
+    const dias = Number(prompt(`Quantos dias você ficará com a bicicleta?`).trim());
 
-
+    if (dias <= 7) {
+        let valor = dias * 15
+        alert(`Você ficará ${dias} dias com a bicicleta e o valor do aluguel será de R$${valor.toFixed(2).replace(",", ".")}.`);
+    }
+    else if (dias > 7) {
+        let valor = dias * 12
+        alert(`Você ficará ${dias} dias com a bicicleta e o valor do aluguel será de R$${valor.toFixed(2).replace(",", ".")}.`);
+    }
+    else alert(`Informação inválida.`);
     //PROCESSAMENTO
 
 
     //SAÍDA
 
-    
+
     /*
     Para testar:
     Dias com a bicicleta 5. Preço Final: R$ 75,00
